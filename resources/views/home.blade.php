@@ -264,26 +264,22 @@
 
             <div class="row folio-entries">
 
-                @foreach ($projects as $project)
+                @foreach ($projects as $key => $project)
                     <div class="column entry">
-                        <a href="{{ asset('images/folio/gallery/g-turban.jpg') }}" class="entry__link glightbox"
-                            data-glightbox="title: White Knit Cap; description: .entry__desc-01">
+                        <a href="{{ asset('images/folio/gallery/' . $project['image']) }}" class="entry__link glightbox"
+                            data-glightbox="title: {{ $project['title'] }}; description: .entry__desc-{{ $key }}">
                             <div class="entry__thumb">
-                                <img src="{{ asset('images/folio/white_turban.jpg') }}"
-                                    srcset="images/folio/white_turban.jpg 1x, images/folio/white_turban@2x.jpg 2x"
-                                    alt="">
+                                <img src="{{ asset('images/folio/' . $project['image']) }}" alt="">
                             </div>
                             <div class="entry__info">
-                                <h4 class="entry__title">White Knit Cap</h4>
-                                <div class="entry__cat">Frontend Design</div>
+                                <h4 class="entry__title">{{ $project['title'] }}</h4>
+                                <div class="entry__cat">{{ $project['description'] }}</div>
                             </div>
                         </a>
 
-                        <div class="glightbox-desc entry__desc-01">
+                        <div class="glightbox-desc entry__desc-{{ $key }}">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Inventore ipsum iste soluta fugiat, impedit illum ducimus
-                                deleniti facilis ab, tempora non! Nisi, tempora provident.
+                                {{ $project['details'] }}
                                 <a href="{{ route('project.details', 1) }}">Project Link</a>.
                             </p>
                         </div>
@@ -296,82 +292,27 @@
             <div class="row s-testimonials">
                 <div class="column xl-12">
 
-                    <h3 class="s-testimonials__header">Hear it from My Happy Clients</h3>
+                    <h3 class="s-testimonials__header">Hear from My Happy Clients</h3>
 
                     <div class="swiper-container s-testimonials__slider">
 
                         <div class="swiper-wrapper">
 
+                            @foreach ($testimonials as $testimonial)
                             <div class="s-testimonials__slide swiper-slide">
                                 <div class="s-testimonials__author">
-                                    <img src="{{ asset('images/avatars/user-02.jpg') }}" alt="Author image"
+                                    <img src="{{ asset('images/avatars/' . $testimonial['image']) }}" alt="Author image"
                                         class="s-testimonials__avatar">
                                     <cite class="s-testimonials__cite">
-                                        <strong>John Rockefeller</strong>
-                                        <span>Standard Oil Co.</span>
+                                        <strong>{{ $testimonial['client_name'] }}</strong>
+                                        <span>{{ $testimonial['company'] }}</span>
                                     </cite>
                                 </div>
                                 <p>
-                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore
-                                    rem.
-                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores
-                                    quaerat fuga rem nihil nostrum.
-                                    Laudantium quia consequatur molestias.
+                                    {{ $testimonial['testimonial'] }}
                                 </p>
                             </div> <!-- end s-testimonials__slide -->
-
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="{{ asset('images/avatars/user-03.jpg') }}" alt="Author image"
-                                        class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        <strong>Andrew Carnegie</strong>
-                                        <span>Carnegie Steel Co.</span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat
-                                    voluptas animi adipisci.
-                                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                                    Quasi voluptas eius distinctio. Atque eos maxime.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
-
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="{{ asset('images/avatars/user-01.jpg') }}" alt="Author image"
-                                        class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        <strong>John Morgan</strong>
-                                        <span>JP Morgan & Co.</span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea
-                                    quia nesciunt. Ducimus aut sed ipsam.
-                                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas
-                                    eius distinctio.
-                                    Voluptatem dignissimos ut.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
-
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="{{ asset('images/avatars/user-06.jpg') }}" alt="Author image"
-                                        class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        <strong>Henry Ford</strong>
-                                        <span>Ford Motor Co.</span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui.
-                                    In ac felis
-                                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti
-                                    expedita voluptas odit.
-                                    Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
+                            @endforeach
 
                         </div> <!-- end swiper-wrapper -->
 
@@ -393,52 +334,45 @@
 
                 <div class="column counter-items__item">
                     <div class="num">
-                        80
+                        {{ $homeContents['happy_customers'] }}
                         <span>+</span>
                     </div>
                     <h5>Happy Customers</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vel harum magni quae voluptate error quo repellendus inventore
-                        laborum ex veniam.
+                        My customers are my biggest advocates. I have served a wide range of customers from various industries and helped them achieve their goals.
                     </p>
                 </div> <!-- end counter-items__item -->
 
                 <div class="column counter-items__item">
                     <div class="num">
-                        120
+                        {{ $homeContents['projects_completed'] }}
                         <span>+</span>
                     </div>
                     <h5>Projects Completed</h5>
                     <p>
-                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue.
-                        Fusce vel dui. In ac felis
-                        quis tortor malesuada pretium
+                        I have completed a wide range of projects. I have helped many clients achieve their goals.
                     </p>
                 </div> <!-- end counter-items__item -->
 
                 <div class="column counter-items__item">
                     <div class="num">
-                        23k
+                        {{ $homeContents['lines_of_code'] }}
                         <span>+</span>
                     </div>
                     <h5>Lines of Code</h5>
                     <p>
-                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
-                        adipisci.
-                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus
+                        I have written a lot of lines of code. I have built a wide range of websites and web applications. I have also built a few mobile apps and desktop applications.
                     </p>
                 </div> <!-- end counter-items__item -->
 
                 <div class="column counter-items__item">
                     <div class="num">
-                        85
+                        {{ $homeContents['positive_feedbacks'] }}
                         <span>+</span>
                     </div>
                     <h5>Positive Feedback</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel harum magni quae voluptate error
-                        quo repellendus inventore laborum ex veniam.
+                        I have received a lot of positive feedback from my clients. Maximum of them are always satisfied with my work.
                     </p>
                 </div> <!-- end counter-items__item -->
 
@@ -463,9 +397,7 @@
 
                 <div class="column xl-6 md-12 s-footer__block s-footer__about">
                     <p class="attention-getter">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero,
-                        fugiat laboriosam possimus amet consectetur adipisicing elit reprehenderit eveniet tempore
-                        quisquam ipsa id esse. Facere ratione dignissimos.
+                        I love to create modern, clean and functional website. I'm always open to new freelance opportunities and project collaborations. If you have any question or you just want to chat, feel free to send me an email at <a href="mailto:{{ $homeContents['email'] }}">{{ $homeContents['email'] }}</a>.
                     </p>
                 </div> <!-- end section-footer__about -->
 

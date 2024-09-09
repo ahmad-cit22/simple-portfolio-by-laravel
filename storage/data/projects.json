@@ -1,32 +1,38 @@
 {
     "1": {
-        "name": "Project Meta",
+        "title": "Project Meta",
         "description": "A web-based task management application developed for small teams.",
-        "details": "Project Meta features real-time collaboration tools, task tracking, file sharing, and a simple, intuitive interface. Built with Laravel and Vue.js, it supports role-based access, enabling users to efficiently manage projects, delegate tasks, and track progress."
+        "details": "Project Meta features real-time collaboration tools, task tracking, file sharing, and a simple, intuitive interface. Built with Laravel and Vue.js, it supports role-based access, enabling users to efficiently manage projects, delegate tasks, and track progress.",
+        "image": "grayscale.jpg"
     },
     "2": {
-        "name": "Project Astra",
+        "title": "Project Astra",
         "description": "A customizable e-commerce platform for fashion retailers.",
-        "details": "Project Astra offers a responsive design, multi-currency support, and integrated payment gateways. Developed using Laravel and Livewire, it includes an admin dashboard for inventory management, sales analytics, and customer relationship management."
+        "details": "Project Astra offers a responsive design, multi-currency support, and integrated payment gateways. Developed using Laravel and Livewire, it includes an admin dashboard for inventory management, sales analytics, and customer relationship management.",
+        "image": "tulips.jpg"
     },
     "3": {
-        "name": "Project Omega",
+        "title": "Project Omega",
         "description": "A content management system for bloggers and small publishers.",
-        "details": "Project Omega provides an easy-to-use interface for creating and managing blog posts, media galleries, and user comments. It’s built with Laravel and Tailwind CSS, supporting SEO optimization, social media integration, and multilingual content."
+        "details": "Project Omega provides an easy-to-use interface for creating and managing blog posts, media galleries, and user comments. It’s built with Laravel and Tailwind CSS, supporting SEO optimization, social media integration, and multilingual content.",
+        "image": "lamp.jpg"
     },
     "4": {
-        "name": "Project Delta",
+        "title": "Project Delta",
         "description": "A B2B e-commerce site for wholesale electronics distribution.",
-        "details": "Project Delta includes features like bulk ordering, tiered pricing, and supplier management. The platform is built with Laravel and Bootstrap, supporting multiple payment methods, real-time order tracking, and a custom API for third-party integrations."
+        "details": "Project Delta includes features like bulk ordering, tiered pricing, and supplier management. The platform is built with Laravel and Bootstrap, supporting multiple payment methods, real-time order tracking, and a custom API for third-party integrations.",
+        "image": "turban.jpg"
     },
     "5": {
-        "name": "Project Zeta",
+        "title": "Project Zeta",
         "description": "A student information system for educational institutions.",
-        "details": "Project Zeta offers modules for attendance tracking, grade management, and communication between teachers, students, and parents. Built with Laravel and React, it includes a secure login system, automated report generation, and a mobile-responsive design."
+        "details": "Project Zeta offers modules for attendance tracking, grade management, and communication between teachers, students, and parents. Built with Laravel and React, it includes a secure login system, automated report generation, and a mobile-responsive design.",
+        "image": "woodcraft.jpg"
     },
     "6": {
-        "name": "Project Theta",
+        "title": "Project Theta",
         "description": "An online marketplace for handcrafted goods.",
-        "details": "Project Theta allows artisans to set up their shops, list products, and manage orders. Developed using Laravel and Alpine.js, it features a user-friendly dashboard, product reviews, seller profiles, and secure payment processing through Stripe and PayPal."
+        "details": "Project Theta allows artisans to set up their shops, list products, and manage orders. Developed using Laravel and Alpine.js, it features a user-friendly dashboard, product reviews, seller profiles, and secure payment processing through Stripe and PayPal.",
+        "image": "tropical.jpg"
     }
 }
