@@ -1,0 +1,20 @@
+[
+    {
+        "company": "Company X",
+        "position": "Software Developer",
+        "duration": "Jan 2020 - Present",
+        "description": "Developed various web applications using Laravel."
+    },
+    {
+        "company": "Company Y",
+        "position": "Web Developer",
+        "duration": "Jun 2018 - Dec 2019",
+        "description": "Worked on front-end and back-end development."
+    },
+    {
+        "company": "Company Z",
+        "position": "Software Engineer",
+        "duration": "May 2016 - May 2018",
+        "description": "Worked on various web applications."
+    }
+]

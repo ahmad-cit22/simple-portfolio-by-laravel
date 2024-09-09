@@ -1,0 +1,14 @@
+[
+    {
+        "name": "HTML",
+        "level": "Expert"
+    },
+    {
+        "name": "PHP",
+        "level": "Mid-level"
+    },
+    {
+        "name": "Laravel",
+        "level": "Learner"
+    }
+]
