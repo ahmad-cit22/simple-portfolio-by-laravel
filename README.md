@@ -76,7 +76,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-Your Name - [n.ahmad.web.cit22@gmail.com
+Nafis Ahmed - [n.ahmad.web.cit22@gmail.com
 ](mailto:n.ahmad.web.cit22@gmail.com
 )
 
