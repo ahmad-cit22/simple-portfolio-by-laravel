@@ -15,6 +15,6 @@ class HomeController extends Controller
         $skills = json_decode(file_get_contents(storage_path('data/skills.json')), true);
         $testimonials = json_decode(file_get_contents(storage_path('data/testimonials.json')), true);
 
-        return view('home', compact('homeContents', 'workExperiences', 'projects', 'awards', 'skills', 'testimonials'));
+        return view('home', compact('homeContents', 'workExperiences', 'projects', 'awards', 'skills', 'testimonials')); 
     }
 }
